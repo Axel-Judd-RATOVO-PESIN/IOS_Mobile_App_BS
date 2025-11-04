@@ -26,7 +26,7 @@ struct ContentView: View {
             // 2. Initialisation d'un bouton simple
             PrimaryButton(title: "Valider", isLoading: false) {
                 print("Bouton simple cliqué !")
-            }.font(.headline)
+            }.tint(.gray)
             .padding(5)
             
             
