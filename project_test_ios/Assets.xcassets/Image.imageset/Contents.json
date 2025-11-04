@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Capture_d_écran_2025-11-04_à_09.38.54-removebg-preview.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
+  }
+}

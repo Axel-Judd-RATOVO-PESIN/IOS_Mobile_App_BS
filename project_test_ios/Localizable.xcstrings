@@ -1,0 +1,75 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "-1" : {
+
+    },
+    "-10" : {
+
+    },
+    "+1" : {
+
+    },
+    "+10" : {
+
+    },
+    "Changer de photo" : {
+
+    },
+    "Completed:" : {
+
+    },
+    "Counter Game" : {
+
+    },
+    "Description" : {
+
+    },
+    "False" : {
+
+    },
+    "Home" : {
+
+    },
+    "Informations Personnelles" : {
+
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Modifier" : {
+
+    },
+    "Nom" : {
+
+    },
+    "Prénom" : {
+
+    },
+    "Profil" : {
+
+    },
+    "Profile" : {
+
+    },
+    "Reset" : {
+
+    },
+    "Terminer" : {
+
+    },
+    "Title:" : {
+
+    },
+    "Todo #%lld" : {
+
+    },
+    "TODO ID : %lld" : {
+
+    },
+    "True" : {
+
+    }
+  },
+  "version" : "1.0"
+}

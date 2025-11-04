@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		AEC16B1E2EBA46C400B22552 /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = AEC16B1D2EBA46C400B22552 /* DesignSystem */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		AE465E8A2EB89C88001310FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,22 @@
 		AE465E932EB89C88001310FC /* project_test_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = project_test_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AEC16B1C2EBA46B600B22552 /* Exceptions for "project_test_ios" folder in "project_test_ios" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Package/DesignSystem,
+			);
+			target = AE465E7B2EB89C88001310FC /* project_test_ios */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AE465E7E2EB89C88001310FC /* project_test_ios */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AEC16B1C2EBA46B600B22552 /* Exceptions for "project_test_ios" folder in "project_test_ios" target */,
+			);
 			path = project_test_ios;
 			sourceTree = "<group>";
 		};
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC16B1E2EBA46C400B22552 /* DesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +96,7 @@
 				AE465E7E2EB89C88001310FC /* project_test_ios */,
 				AE465E8C2EB89C88001310FC /* project_test_iosTests */,
 				AE465E962EB89C88001310FC /* project_test_iosUITests */,
+				AEC16AE62EBA11F100B22552 /* Frameworks */,
 				AE465E7D2EB89C88001310FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +109,13 @@
 				AE465E932EB89C88001310FC /* project_test_iosUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AEC16AE62EBA11F100B22552 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +138,7 @@
 			);
 			name = project_test_ios;
 			packageProductDependencies = (
+				AEC16B1D2EBA46C400B22552 /* DesignSystem */,
 			);
 			productName = project_test_ios;
 			productReference = AE465E7C2EB89C88001310FC /* project_test_ios.app */;
@@ -192,9 +219,12 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = AE465E732EB89C88001310FC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AE465E7D2EB89C88001310FC /* Products */;
 			projectDirPath = "";
@@ -328,6 +358,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -384,6 +415,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -550,6 +582,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEC16B1D2EBA46C400B22552 /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE465E742EB89C88001310FC /* Project object */;
 }

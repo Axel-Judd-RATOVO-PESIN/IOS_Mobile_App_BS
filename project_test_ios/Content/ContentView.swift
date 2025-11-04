@@ -4,7 +4,7 @@
 //
 //  Created by RATOVO PESIN Axel Judd on 03/11/2025.
 //
-
+import DesignSystem
 import SwiftUI
 
 struct ContentView: View {
@@ -23,34 +23,18 @@ struct ContentView: View {
                 .font(.title2)
                 .bold()
             
-            // Boutons de modification regroupés
-            HStack(spacing: 15) {
-                Button("-10") { viewmodel.counter -= 10 }
-                Button("-1") { viewmodel.counter -= 1 }
-                Button("+1") { viewmodel.counter += 1 }
-                Button("+10") { viewmodel.counter += 10 }
-            }
-            .buttonStyle(.borderedProminent)
+            // 2. Initialisation d'un bouton simple
+            PrimaryButton(title: "Valider", isLoading: false) {
+                print("Bouton simple cliqué !")
+            }.font(.headline)
+            .padding(5)
             
-            //  Reset
-            Button("Reset") {
-                viewmodel.counter = 0
-            }
-            .buttonStyle(.borderedProminent)
-            .tint(.red)
             
-            /*
-            // 🔗 Lien vers Todo
-            Link("Open Todo #\(viewmodel.counter)",
-                 destination: URL(string: "https://jsonplaceholder.typicode.com/todos/\(viewmodel.counter)")!)
-            .font(.headline)
-            .foregroundColor(.white)
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Color.blue)
-            .cornerRadius(10)
-            .padding(.horizontal)
-            */
+            // 3. Initialisation d'un bouton avec icône
+            PrimaryButton(title: "Envoyer", icon: Image(systemName: "paperplane.fill"), isLoading: false) {
+                print("Bouton avec icône cliqué !")
+            }
+            //---- Section d'afficahe des données API
             if let todo = viewmodel.todo {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Todo #\(todo.id)")
@@ -79,6 +63,39 @@ struct ContentView: View {
         }
         .padding()
         .task{await viewmodel.fetchTodo(for: viewmodel.counter)}
+            
+            // Boutons de modification regroupés
+            HStack(spacing: 10) {
+                Button("-10") { viewmodel.counter -= 10 }
+                Button("-1") { viewmodel.counter -= 1 }
+                Button("+1") { viewmodel.counter += 1 }
+                Button("+10") { viewmodel.counter += 10 }
+            }
+            .buttonStyle(.borderedProminent)
+            
+            //  Reset
+            Button("Reset", systemImage: "arrow.counterclockwise") {
+                viewmodel.counter = 0
+            }
+            .font(.headline)
+            .padding()
+            .background(.ultraThinMaterial)
+            .cornerRadius(12)
+
+            
+            /*
+            // 🔗 Lien vers Todo
+            Link("Open Todo #\(viewmodel.counter)",
+                 destination: URL(string: "https://jsonplaceholder.typicode.com/todos/\(viewmodel.counter)")!)
+            .font(.headline)
+            .foregroundColor(.white)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.blue)
+            .cornerRadius(10)
+            .padding(.horizontal)
+            */
+
         
         
     }

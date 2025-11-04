@@ -6,11 +6,16 @@
 //
 
 import Observation
+import DeveloperToolsSupport
 
 @Observable
 class ProfileViewModel {
     var nom: String = "OBBER"
     var prenom: String = "Clint"
-    var image: String = "person.circle.fill"
-    var desc: String = "My name is OBBER Clint, I'm a software engineer."
+    var image: ImageResource = .image
+    var desc: String = ""
+    
+    init() {
+        self.desc = "My name is \(nom) \(prenom), I'm a software engineer."
+    }
 }

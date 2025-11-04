@@ -8,17 +8,19 @@
 import SwiftUI
 
 @main
-struct project_test_iosApp: App {
+struct ProjectTestIOSApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack{
-                NavigationLink("Counter game"){
-                    ContentView()
+            NavigationStack {
+                List {
+                    NavigationLink("Counter Game") {
+                        ContentView()
+                    }
+                    NavigationLink("Profile") {
+                        ProfileView()
+                    }
                 }
-                NavigationLink("Profile"){
-                    ProfileView()
-                }.navigationTitle("Home")
-                    .padding()
+                .navigationTitle("Home")
             }
         }
     }
